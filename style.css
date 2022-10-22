@@ -1,0 +1,39 @@
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+} */
+
+.form {
+    display: flex;
+}
+
+
+
+.formItem {
+    flex: 1;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.value {
+    background-color: grey;
+    height: auto;
+    width: inherit;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    padding: 5px;
+    font-size: 1rem;
+    color: white;
+}
+
+.annum {
+    display: flex;
+    flex-direction: column;
+}
