@@ -9,17 +9,19 @@
   </head>
   <body>
     <h1>Enter your income</h1>
-    <div class="form">
-      <div class="formItem" tabindex="0">
-        <div>Per Month</div>
-        <div class="value monthValue">LKR 50,000</div>
-      </div>
-      <div class="formItem" tabindex="0">
-        <div>Per Annum</div>
-        <div class="value annumValue">0</div>
-      </div>
-    </div>
+    <label>
+      Per Month
+      <input type="text" class="input-monthValue" placeholder="income" />
+    </label>
 
+    <label
+      >Per Annum
+      <input type="text" class="input-annumValue" placeholder="income" />
+    </label>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <script src="cleave.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
