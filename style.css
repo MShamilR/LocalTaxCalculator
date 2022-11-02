@@ -1,39 +1,29 @@
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+body {
+    position: relative;
 }
 
-input[type=number] {
-    -moz-appearance: textfield;
-} */
-
-.form {
+.title {
+    text-align: center;
+}
+.input, .inputAppend, .mTDAppend, .mTHAppend {
     display: flex;
+    max-width: 1100px;
+    margin: auto;
+    
 }
-
-
-
-.formItem {
-    flex: 1;
-    border-radius: 10px;
-    margin: 0 10px;
-    padding: 0;
-}
-
-.value {
-    background-color: grey;
-    height: auto;
-    width: inherit;
-    display: flex;
-    justify-content: end;
-    align-content: center;
-    padding: 5px;
-    font-size: 1rem;
-    color: white;
-}
-
-.annum {
+.inputCSS, .item {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    margin: 0 1rem;
+}
+
+button {
+    display: block;
+    margin: auto;
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+    
+    
 }

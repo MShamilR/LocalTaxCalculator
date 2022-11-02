@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Calculate Tax</title>
-  </head>
-  <body>
-    <h1>Enter your income</h1>
-    <label>
-      Per Month
-      <input type="text" class="input-monthValue" placeholder="income" />
-    </label>
 
-    <label
-      >Per Annum
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Calculate Tax</title>
+</head>
+
+<body>
+  <h1 class="title">Enter your income</h1>
+  <div class="input">
+    <div class="inputCSS">
+      <label for="perMonth">Per Month</label>
+      <input type="text" class="input-monthValue" placeholder="income" id="perMOnth" />
+    </div>
+    <div class="inputCSS">
+      <label for="perAnnum">Per Annum</label>
+
       <input type="text" class="input-annumValue" placeholder="income" />
-    </label>
+    </div>
+  </div>
 
-    <button onclick="calculate()">Calculate</button>
+  <button onclick="calculate()">Calculate</button>
 
-    <script src="cleave.min.js"></script>
-    <script src="index.js"></script>
-  </body>
+  <div class="inputAppend">
+    <div class="item">
+      <h1>Your Monthly Income</h1>
+      <h4 class="mI"></h4>
+    </div>
+
+    <div class="item">
+      <h1>Your Yearly Income</h1>
+      <h4 class="yI"></h4>
+    </div>
+  </div>
+
+  <div class="mTDAppend">
+    <div class="item">
+      <h1>Your Monthly Tax Due</h1>
+      <h4 class="mTD"></h4>
+    </div>
+
+    <div class="item">
+      <h1>Your Yearly Tax Due</h1>
+      <h4 class="yTD"></h4>
+    </div>
+  </div>
+
+  <div class="mTHAppend">
+    <div class="item">
+      <h1>Your Monthly Take Home</h1>
+      <h4 class="mTH"></h4>
+    </div>
+
+    <div class="item">
+      <h1>Your Yearly Take Home</h1>
+      <h4 class="yTH"></h4>
+    </div>
+  </div>
+
+
+
+  <script src="cleave.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>
