@@ -5,63 +5,80 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <title>Calculate Tax</title>
 </head>
 
 <body>
   <h1 class="title">Enter your income</h1>
+
   <div class="input">
+
     <div class="inputCSS">
       <label for="perMonth">Per Month</label>
-      <input type="text" class="input-monthValue" placeholder="income" id="perMOnth" />
+      <input type="text" class="input-monthValue" placeholder="income" id="perMonth" />
     </div>
+
     <div class="inputCSS">
       <label for="perAnnum">Per Annum</label>
-
       <input type="text" class="input-annumValue" placeholder="income" />
     </div>
+
   </div>
 
-  <button onclick="calculate()">Calculate</button>
+  <button onclick="calculate()">Calculate Tax</button>
 
   <div class="inputAppend">
     <div class="item">
-      <h1>Your Monthly Income</h1>
-      <h4 class="mI"></h4>
+      <h3 class="iHeader">Your Monthly Income</h3>
+      <h3 class="mI">LKR 0</h3>
     </div>
 
     <div class="item">
-      <h1>Your Yearly Income</h1>
-      <h4 class="yI"></h4>
+      <h3 class="iHeader">Your Yearly Income</h3>
+      <h3 class="yI">LKR 0</h3>
     </div>
   </div>
 
   <div class="mTDAppend">
     <div class="item">
-      <h1>Your Monthly Tax Due</h1>
-      <h4 class="mTD"></h4>
+      <h3 class="tHeader">Your Monthly Tax Due</h3>
+      <h3 class="mTD">LKR 0</h3>
     </div>
 
     <div class="item">
-      <h1>Your Yearly Tax Due</h1>
-      <h4 class="yTD"></h4>
+      <h3 class="tHeader">Your Yearly Tax Due</h3>
+      <h3 class="yTD"> LKR 0</h3>
     </div>
   </div>
 
   <div class="mTHAppend">
     <div class="item">
-      <h1>Your Monthly Take Home</h1>
-      <h4 class="mTH"></h4>
+      <h3 class="thHeader">Your Monthly Take Home</h3>
+      <h3 class="mTH">LKR 0</h3>
     </div>
 
     <div class="item">
-      <h1>Your Yearly Take Home</h1>
-      <h4 class="yTH"></h4>
+      <h3 class="thHeader">Your Yearly Take Home</h3>
+      <h3 class="yTH">LKR 0</h3>
     </div>
   </div>
 
-
+  <footer>
+    
+    <container>
+      <h3 class="seeRates fItem">See Tax Rates</h3>
+      <p class="pAbsolute">💚 Coded with passion 💚</p>
+      <div class="linkedIn fItem">
+        <p class="contact">Contact me on</p>
+        <img src="imgs/linkedIn.png" >
+      </div>
+    </container>
+    
+  </footer>
 
   <script src="cleave.min.js"></script>
   <script src="index.js"></script>
