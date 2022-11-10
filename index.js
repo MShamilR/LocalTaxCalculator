@@ -73,13 +73,16 @@ const calculate = () => {
   const monthlyValue = parseFloat(perMonth.value.replace(/[^\d\.]*/g, ""));
   const yearlyValue = parseFloat(perAnnum.value.replace(/[^\d\.]*/g, ""));
 
-  monthlyIncome.innerHTML = toLKR(monthlyValue);
-  yearlyIncome.innerHTML = toLKR(yearlyValue);
+  
 
   const annumValue = parseFloat(perAnnum.value.replace(/[^\d\.]*/g, ""));
   console.log(annumValue);
   let pAV = annumValue;
   let taxAmount = "";
+  if (isNaN(pAV)) {
+    alert('Please enter your monthly income or yearly income')
+    return
+  }
   if (pAV <= 1200000) {
     console.log(
       "You don't have to pay taxes as of now, Work hard until you have to pay taxes"
@@ -121,6 +124,8 @@ const calculate = () => {
   const monthlyTHValue = monthlyValue - monthlyTaxValue;
   const yearlyTHValue = yearlyValue - yearlyTaxValue;
 
+  monthlyIncome.innerHTML = toLKR(monthlyValue);
+  yearlyIncome.innerHTML = toLKR(yearlyValue);
   monthlyTax.innerHTML = toLKR(monthlyTaxValue);
   yearlyTax.innerHTML = toLKR(yearlyTaxValue);
   monthlyTH.innerHTML = toLKR(monthlyTHValue);
