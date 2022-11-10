@@ -13,75 +13,82 @@
 </head>
 
 <body>
-  <h1 class="title">Enter your income</h1>
+  
+    <h1 class="title">Enter your income</h1>
+    <!-- <form> -->
+    <div class="input">
 
-  <div class="input">
+      <div class="inputCSS">
+        <label for="perMonth">Per Month</label>
+        <input type="text" class="input-monthValue" placeholder="income" id="perMonth" />
+      </div>
 
-    <div class="inputCSS">
-      <label for="perMonth">Per Month</label>
-      <input type="text" class="input-monthValue" placeholder="income" id="perMonth" />
+      <div class="inputCSS">
+        <label for="perAnnum">Per Annum</label>
+        <input type="text" class="input-annumValue" placeholder="income" />
+      </div>
+
     </div>
 
-    <div class="inputCSS">
-      <label for="perAnnum">Per Annum</label>
-      <input type="text" class="input-annumValue" placeholder="income" />
+    <button onclick="calculate()">Calculate Tax</button>
+    <!-- </form> -->
+
+    <div class="inputAppend">
+      <div class="item">
+        <h3 class="iHeader">Your Monthly Income</h3>
+        <h3 class="mI">&nbsp;</h3>
+      </div>
+
+      <div class="item">
+        <h3 class="iHeader">Your Yearly Income</h3>
+        <h3 class="yI">&nbsp;</h3>
+      </div>
     </div>
 
-  </div>
+    <div class="mTDAppend">
+      <div class="item">
+        <h3 class="tHeader">Your Monthly Tax Due</h3>
+        <h3 class="mTD">LKR 0</h3>
+      </div>
 
-  <button onclick="calculate()">Calculate Tax</button>
-
-  <div class="inputAppend">
-    <div class="item">
-      <h3 class="iHeader">Your Monthly Income</h3>
-      <h3 class="mI">LKR 0</h3>
+      <div class="item">
+        <h3 class="tHeader">Your Yearly Tax Due</h3>
+        <h3 class="yTD"> LKR 0</h3>
+      </div>
     </div>
 
-    <div class="item">
-      <h3 class="iHeader">Your Yearly Income</h3>
-      <h3 class="yI">LKR 0</h3>
-    </div>
-  </div>
+    <div class="mTHAppend">
+      <div class="item">
+        <h3 class="thHeader">Your Monthly Take Home</h3>
+        <h3 class="mTH">LKR 0</h3>
+      </div>
 
-  <div class="mTDAppend">
-    <div class="item">
-      <h3 class="tHeader">Your Monthly Tax Due</h3>
-      <h3 class="mTD">LKR 0</h3>
+      <div class="item">
+        <h3 class="thHeader">Your Yearly Take Home</h3>
+        <h3 class="yTH">LKR 0</h3>
+      </div>
     </div>
-
-    <div class="item">
-      <h3 class="tHeader">Your Yearly Tax Due</h3>
-      <h3 class="yTD"> LKR 0</h3>
-    </div>
-  </div>
-
-  <div class="mTHAppend">
-    <div class="item">
-      <h3 class="thHeader">Your Monthly Take Home</h3>
-      <h3 class="mTH">LKR 0</h3>
-    </div>
-
-    <div class="item">
-      <h3 class="thHeader">Your Yearly Take Home</h3>
-      <h3 class="yTH">LKR 0</h3>
-    </div>
-  </div>
 
   <footer>
-    
+
     <container>
-      <h3 class="seeRates fItem">See Tax Rates</h3>
+      <a href="taxrates.html">
+        <h3 class="seeRates fItem">See Tax Rates</h3>
+      </a>
       <p class="pAbsolute">💚 Coded with passion 💚</p>
-      <div class="linkedIn fItem">
-        <p class="contact">Contact me on</p>
-        <img src="imgs/linkedIn.png" >
-      </div>
+      <a href="https://www.linkedin.com/in/mhdshamil/" target="_blank" rel="noopener noreferrer">
+        <div class="linkedIn fItem">
+          <p class="contact">Contact me on</p>
+          <img src="imgs/linkedIn.png">
+        </div>
+      </a>
     </container>
-    
+
   </footer>
 
   <script src="cleave.min.js"></script>
   <script src="index.js"></script>
+
 </body>
 
 </html>

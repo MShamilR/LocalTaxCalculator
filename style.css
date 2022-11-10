@@ -11,7 +11,7 @@ body {
     overflow: hidden;
 }
 
-.title {
+.title, h2 {
     text-align: center;
     margin: 1rem;
 }
@@ -170,4 +170,35 @@ footer {
     text-align: center;
     color: #008037;
     margin: 0.5rem 0 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* .rates {
+    position: relative;
+} */
+
+table {
+    width: calc(100% - 2rem);
+        max-width: calc(1100px - 2rem);
+        margin: auto;
+        margin-top: 1rem;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #d9d9d9;
+}
+
+.rateHead {
+    margin-top: 8rem;
 }

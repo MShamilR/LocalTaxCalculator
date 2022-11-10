@@ -1,7 +1,22 @@
 const perMonth = document.querySelector(".input-monthValue");
 const perAnnum = document.querySelector(".input-annumValue");
+const monthlyIncome = document.querySelector(".mI");
+const yearlyIncome = document.querySelector(".yI");
+const monthlyTax = document.querySelector(".mTD");
+const yearlyTax = document.querySelector(".yTD");
+const monthlyTH = document.querySelector(".mTH");
+const yearlyTH = document.querySelector(".yTH");
 /* const check = document.querySelector(".check");
  */
+
+const toLKR = (value) => {
+  let LKR = new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "LKR",
+  }).format(value);
+  return LKR;
+};
+
 var cleave = new Cleave(".input-monthValue", {
   numeral: true,
   numeralThousandsGroupStyle: "lakh",
@@ -15,6 +30,16 @@ var cleave = new Cleave(".input-annumValue", {
   numeralThousandsGroupStyle: "lakh",
   prefix: "LKR ",
 });
+
+perMonth.onfocus = function () {
+  perMonth.value = "LKR ";
+  perAnnum.value = "LKR ";
+};
+
+perAnnum.onfocus = function () {
+  perMonth.value = "LKR ";
+  perAnnum.value = "LKR ";
+};
 
 perMonth.onkeyup = function (e) {
   if (perMonth.value === "LKR ") {
@@ -44,9 +69,16 @@ perAnnum.onkeyup = function (e) {
 };
 
 const calculate = () => {
+  /* document.querySelector(".mI").innerHTML = perMonth.value; */
+  const monthlyValue = parseFloat(perMonth.value.replace(/[^\d\.]*/g, ""));
+  const yearlyValue = parseFloat(perAnnum.value.replace(/[^\d\.]*/g, ""));
+
+  monthlyIncome.innerHTML = toLKR(monthlyValue);
+  yearlyIncome.innerHTML = toLKR(yearlyValue);
+
   const annumValue = parseFloat(perAnnum.value.replace(/[^\d\.]*/g, ""));
-  console.log(annumValue)
-  const pAV = annumValue
+  console.log(annumValue);
+  let pAV = annumValue;
   let taxAmount = "";
   if (pAV <= 1200000) {
     console.log(
@@ -82,5 +114,15 @@ const calculate = () => {
     taxAmount = 30000 + 60000 + 90000 + 120000 + 150000 + taxable * 0.36;
     console.log(taxAmount);
   }
-  pAV = "";
+
+  const monthlyTaxValue = taxAmount / 12;
+  const yearlyTaxValue = taxAmount;
+
+  const monthlyTHValue = monthlyValue - monthlyTaxValue;
+  const yearlyTHValue = yearlyValue - yearlyTaxValue;
+
+  monthlyTax.innerHTML = toLKR(monthlyTaxValue);
+  yearlyTax.innerHTML = toLKR(yearlyTaxValue);
+  monthlyTH.innerHTML = toLKR(monthlyTHValue);
+  yearlyTH.innerHTML = toLKR(yearlyTHValue);
 };
