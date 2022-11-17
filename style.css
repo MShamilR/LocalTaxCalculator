@@ -3,12 +3,14 @@
         sans-serif;
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
 }
 
 body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
+    margin-bottom: 8rem;
 }
 
 .title,
@@ -82,7 +84,7 @@ textarea {
 }
 
 img {
-    height: 2rem;
+    height: 1.5rem;
     width: auto;
 }
 
@@ -209,15 +211,34 @@ tr:nth-child(even) {
 @media only screen and (max-width: 560px) {
     .pAbsolute {
         display: block;
-        transform: translate(-50%, 3.5rem);
+        transform: translate(-50%, 3rem);
         width: 100%;
         text-align: center;
     }
+
     container {
         align-items: flex-start;
         padding-top: 1rem;
     }
+
     button {
         margin-bottom: 2rem;
     }
+
+
+    .input,
+    .inputAppend,
+    .mTDAppend,
+    .mTHAppend {
+        font-size: 15px;
+    }
+    label,
+    input[type="text"],
+    textarea {
+        font-size: 18px;
+    }
+    .title {
+        font-size: 28px;
+    }
+
 }
