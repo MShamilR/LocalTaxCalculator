@@ -211,7 +211,7 @@ tr:nth-child(even) {
 @media only screen and (max-width: 560px) {
     .pAbsolute {
         display: block;
-        transform: translate(-50%, 3rem);
+        transform: translate(-50%, 3.5rem);
         width: 100%;
         text-align: center;
     }
