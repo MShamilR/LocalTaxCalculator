@@ -73,8 +73,6 @@ const calculate = () => {
   const monthlyValue = parseFloat(perMonth.value.replace(/[^\d\.]*/g, ""));
   const yearlyValue = parseFloat(perAnnum.value.replace(/[^\d\.]*/g, ""));
 
-  
-
   const annumValue = parseFloat(perAnnum.value.replace(/[^\d\.]*/g, ""));
   console.log(annumValue);
   let pAV = annumValue;
