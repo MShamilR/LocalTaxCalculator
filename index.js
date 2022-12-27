@@ -42,31 +42,45 @@ perAnnum.onfocus = function () {
 };
 
 perMonth.onkeyup = function (e) {
-  if (perMonth.value === "LKR ") {
+  /* if (perMonth.value === "LKR ") {
     perAnnum.value = "LKR ";
     return;
-  }
+  } */
   /*  const parsedValue = parseFloat(e.target.value.replace(/,/g, "")); */
   const parsedValue = parseFloat(e.target.value.replace(/[^\d\.]*/g, ""));
-  const multipliedValue = parsedValue * 12;
+  //const multipliedValue = parsedValue * 12;
+  let multipliedValue
+  if (isNaN(parsedValue)) {
+    perAnnum.value = `LKR `;
+  } else {
+    multipliedValue = parsedValue * 12
+    perAnnum.value = `LKR ` + `${multipliedValue.toLocaleString("en-IN")}`;
+  }
   
   /* window.annumNumberValue = multipliedValue; */
-  perAnnum.value = `LKR ` + `${multipliedValue.toLocaleString("en-IN")}`;
+  //perAnnum.value = `LKR ` + `${multipliedValue.toLocaleString("en-IN")}`;
   /* console.log(window.annumParsedValue) */
 };
 
 perAnnum.onkeyup = function (e) {
-  if (perAnnum.value === "LKR ") {
+  /* if (perAnnum.value === "LKR ") {
     perMonth.value = "LKR ";
     return;
-  }
+  } */
   /* const parsedValue = parseFloat(e.target.value.replace(/,/g, "")); */
   const parsedValue = parseFloat(e.target.value.replace(/[^\d\.]*/g, ""));
-  const dividedValue = parsedValue / 12;
+  //const dividedValue = parsedValue / 12;
+  let dividedValue
+  if (isNaN(parsedValue)) {
+    perMonth.value = `LKR `;
+  } else {
+    dividedValue = parsedValue / 12;
+    perMonth.value = `LKR ` + `${dividedValue.toLocaleString("en-IN")}`;
+  }
   /* window.annumParsedValue = parsedValue;
   window.monthNumberValue = dividedValue; */
-  perMonth.value = `LKR ` + `${dividedValue.toLocaleString("en-IN")}`;
-  console.log(parsedValue);
+  //perMonth.value = `LKR ` + `${dividedValue.toLocaleString("en-IN")}`;
+  //console.log(parsedValue);
 };
 
 const calculate = () => {
