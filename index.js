@@ -42,20 +42,21 @@ perAnnum.onfocus = function () {
 };
 
 perMonth.onkeyup = function (e) {
-  if (perMonth.value === "LKR " || "LKR") {
+  if (perMonth.value === "LKR ") {
     perAnnum.value = "LKR ";
     return;
   }
   /*  const parsedValue = parseFloat(e.target.value.replace(/,/g, "")); */
   const parsedValue = parseFloat(e.target.value.replace(/[^\d\.]*/g, ""));
   const multipliedValue = parsedValue * 12;
+  
   /* window.annumNumberValue = multipliedValue; */
   perAnnum.value = `LKR ` + `${multipliedValue.toLocaleString("en-IN")}`;
   /* console.log(window.annumParsedValue) */
 };
 
 perAnnum.onkeyup = function (e) {
-  if (perAnnum.value === "LKR " || "LKR") {
+  if (perAnnum.value === "LKR ") {
     perMonth.value = "LKR ";
     return;
   }
@@ -78,8 +79,8 @@ const calculate = () => {
   let pAV = annumValue;
   let taxAmount = "";
   if (isNaN(pAV)) {
-    alert('Please enter your monthly income or yearly income')
-    return
+    alert("Please enter your monthly income or yearly income");
+    return;
   }
   if (pAV <= 1200000) {
     console.log(
