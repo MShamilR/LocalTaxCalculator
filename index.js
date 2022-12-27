@@ -42,7 +42,7 @@ perAnnum.onfocus = function () {
 };
 
 perMonth.onkeyup = function (e) {
-  if (perMonth.value === "LKR ") {
+  if (perMonth.value === "LKR " || "LKR") {
     perAnnum.value = "LKR ";
     return;
   }
@@ -55,7 +55,7 @@ perMonth.onkeyup = function (e) {
 };
 
 perAnnum.onkeyup = function (e) {
-  if (perAnnum.value === "LKR ") {
+  if (perAnnum.value === "LKR " || "LKR") {
     perMonth.value = "LKR ";
     return;
   }
